@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
 
 class HomeScreen extends StatelessWidget {
 
-  var MyCars = [
+  var picdc = [
     {"img" :"https://static1.cbrimages.com/wordpress/wp-content/uploads/2021/11/The-Presence-DC-Universe.jpg", "name" :"The Presence", },
     {"img" :"images/lucifer.jpg", "name" :"Lucifer", },
     {"img" :"https://img.wattpad.com/story_parts/411/images/1686f460557fb6c3151772397719.jpg", "name" :"Michael Demiurgos", },
@@ -134,7 +134,7 @@ class HomeScreen extends StatelessWidget {
                 child: ClipRRect(
                 borderRadius: BorderRadius.circular(30),
                 child: Image.network(
-                MyCars[index]["img"]!,
+                picdc[index]["img"]!,
                 fit: BoxFit.cover,
                 ),
                 ),
