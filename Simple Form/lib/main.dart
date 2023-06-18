@@ -70,7 +70,7 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Colors.white,
 
       appBar: AppBar(
-        title: Text('Far_muris',
+        title: Text('Football Rizz',
           // textDirection: TextDirection.ltr,
           style: TextStyle(
             color: Colors.black,
@@ -100,7 +100,7 @@ class HomeScreen extends StatelessWidget {
         children: [
           Row(),
           Padding(
-            padding: const EdgeInsets.all(40),
+            padding: const EdgeInsets.all(30),
             child: Text("Login Here:",
               style: TextStyle(
                   fontSize: 24,
@@ -124,7 +124,7 @@ class HomeScreen extends StatelessWidget {
 
           SizedBox(height: 3,),
 
-          Text("Founder of Farmuris"),
+          Text("Founder of Football Rizz"),
 
           SizedBox(height: 15,),
 
@@ -220,6 +220,56 @@ class HomeScreen extends StatelessWidget {
               child: Text("Login"),
             ),
           ),
+
+          SizedBox(height: 45,),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 20),
+                child: FloatingActionButton.extended(onPressed: (){
+
+                  showModalBottomSheet(context: context,
+
+                      backgroundColor: Colors.grey.shade300,
+                      isScrollControlled: false,
+                      useSafeArea: false,
+                      useRootNavigator: true,
+                      shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(16),
+                            topRight: Radius.circular(16),
+                          )),
+
+                      builder: (context){
+
+                    return Column(
+                      children: [
+                        Text("Football", style: TextStyle(
+                            fontSize: 27,
+                            fontWeight: FontWeight.w500
+                        ),),
+                      ],
+                    );
+
+
+
+                      });
+
+
+
+
+
+                },
+
+                label: Text("On Football"),
+                  backgroundColor: Colors.green,
+                  icon: Icon(Icons.sports_soccer_outlined),
+                ),
+              ),
+            ],
+          )
 
 
 

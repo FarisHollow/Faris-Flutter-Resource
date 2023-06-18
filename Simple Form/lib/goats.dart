@@ -45,7 +45,7 @@ class FootballLegendsScreen extends StatelessWidget {
           icon: Icon(Icons.arrow_back_ios_new),
         ),
         actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.sports_football),),
+          IconButton(onPressed: (){}, icon: Icon(Icons.sports_soccer_outlined),),
         ],
       ),
 
