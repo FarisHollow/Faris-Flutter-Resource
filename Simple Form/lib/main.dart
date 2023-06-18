@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_form/goats.dart';
 
 void main() {
   runApp(MyApp(
@@ -50,6 +51,15 @@ MyAlertDialog(context){
 }
 
 class HomeScreen extends StatelessWidget {
+
+  var me = [
+    {
+      "name": "Mir Faris",
+      "pass": "42241"
+    }
+
+
+  ];
 
   TextEditingController _NameEditingController = TextEditingController();
   TextEditingController _PassTextEditingController = TextEditingController();
@@ -192,7 +202,15 @@ class HomeScreen extends StatelessWidget {
               print(_PassTextEditingController.text);
               _NameEditingController.clear();
               _PassTextEditingController.clear();
-              MyAlertDialog(context);},
+              MyAlertDialog(context);
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => FootballLegendsScreen(),
+                ),
+              );
+
+              },
               style: ElevatedButton.styleFrom(
                 textStyle: TextStyle(fontSize: 20), // Set the desired font size
                 padding: EdgeInsets.all(15), // Adjust the padding
